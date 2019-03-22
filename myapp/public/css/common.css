@@ -1,0 +1,17 @@
+body {
+  background: #D5EEFF;
+}
+
+.top-navbar {
+  background: #1B435D;
+  border-radius: 0;
+}
+
+.navbar-title {
+  color: white;
+}
+
+.sample_item {
+  padding: 30px;
+  border-bottom: 2px solid black;
+}

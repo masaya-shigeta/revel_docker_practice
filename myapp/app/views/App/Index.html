@@ -1,0 +1,85 @@
+{{set . "title" "Home"}}
+{{template "header.html" .}}
+
+<nav class="top-navbar navbar navbar-light">
+  <a class="navbar-title navbar-brand" href="/">
+    Revel Practice
+  </a>
+</nav>
+
+<main>
+  <div class="container">
+
+    <!-- bind -->
+    <div class="sample_item">
+      <h2>input bind</h2>
+      <div id="inputs">
+        <form action="{{url "App.BindInput"}}">
+            <div class="col">
+              <input name="InputBindFrom.Food" type="text" class="form-control">
+            </div>
+            <div class="col">
+              <input name="InputBindFrom.Number" type="number" class="form-control">
+            </div>
+            <div class="form-check col">
+              <input name="InputBindFrom.Bool" type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check Box</label>
+            </div>
+            <div class="col">
+              <input type="submit" class="form-control btn btn-primary" value="送信">
+            </div>
+        </form>
+      </div>
+      <hr>
+    </div>
+
+    <!-- jsonunmarshal -->
+    <div class="sample_item">
+      <h2>jsonUnmarshal</h2>
+      <div class="container">
+        <a class="btn btn-info" href="{{url "App.JsonUnmarshal"}}">Unmarshal開始</a>
+      </div>
+    </div>
+
+    <!-- v9 nest validation -->
+    <div class="sample_item">
+      <h2>v9 nest validation</h2>
+      <div class="container">
+        <form class="" action="index.html" method="post">
+          <table>
+            <tr>
+              <td>text</td>
+              <td><input type="text" name="" value=""></td>
+            </tr>
+            <tr>
+              <td>text2</td>
+              <td><input type="text" name="" value=""></td>
+            </tr>
+            <tr>
+              <td>number</td>
+              <td><input type="number" name="" value=""></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </div>
+
+    <!-- Template Function -->
+    <div class="sample_item">
+      <h2>Template Function</h2>
+      {{plus 1 1}}
+    </div>
+
+    <!-- create table -->
+    <div class="sample_item">
+      <h2>Creaet Table</h2>
+      <form class="" action="{{url "App.CreateTableSample"}}" method="post">
+        <button class="btn btn-info" type="submit" name="button">テーブル作成</button>
+      </form>
+    </div>
+
+  </div>
+</main>
+
+
+{{template "footer.html" .}}

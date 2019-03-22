@@ -1,0 +1,23 @@
+version: '2'
+services:
+    db:
+        image: mysql:5.7
+        environment:
+            - MYSQL_ROOT_PASSWORD=secret
+            - MYSQL_DATABASE=db
+            - MYSQL_USER=allr
+            - MYSQL_PASSWORD=secret
+        ports:
+            - "3306:3306"
+        expose:
+            - 3306
+
+    web:
+        build: .
+        command: revel run myapp
+        volumes:
+            - ./myapp:/go/src/myapp
+        ports:
+            - 9000:9000
+        depends_on:
+            - db
