@@ -11,6 +11,10 @@ GET     /input/bind                             App.BindInput
 GET     /json/unmarshal                         App.JsonUnmarshal
 #CreateTableSample
 POST    /table/create                           App.CreateTableSample
+POST    /table/insert                           App.InsertSample
+POST    /table/insert/2                         App.InsertSample2
+POST    /table/join/struct                      App.JointStruct
+
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

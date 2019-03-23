@@ -12,7 +12,15 @@ type CommonModel struct {
 
 type Table1 struct {
 	CommonModel
-	Title                     string `json:"shop_id" gorm:"type:varchar(128)" sql:"not null"`
-	Number                    int    `json:"branch_id" gorm:"type:INT UNSIGNED not null;"`
-	Comment                   string `json:"shop_name" gorm:"type:varchar(256)" `
+	Title                     string `gorm:"type:varchar(128)" sql:"not null"`
+	Number                    int    `gorm:"type:INT UNSIGNED not null;"`
+	Comment                   string `gorm:"type:varchar(256)" `
+}
+
+type Table2 struct {
+	CommonModel
+	Title                     string `gorm:"type:varchar(128)" sql:"not null"`
+	Number                    int    `gorm:"type:INT UNSIGNED not null;"`
+  Table1_id                 int `gorm:"type:INT UNSIGNED not null;"`
+	Comment                   string `gorm:"type:varchar(256)" `
 }

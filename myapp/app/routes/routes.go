@@ -130,4 +130,25 @@ func (_ tApp) CreateTableSample(
 	return revel.MainRouter.Reverse("App.CreateTableSample", args).URL
 }
 
+func (_ tApp) InsertSample(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("App.InsertSample", args).URL
+}
+
+func (_ tApp) InsertSample2(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("App.InsertSample2", args).URL
+}
+
+func (_ tApp) JointStruct(
+		) string {
+	args := make(map[string]string)
+	
+	return revel.MainRouter.Reverse("App.JointStruct", args).URL
+}
+
 

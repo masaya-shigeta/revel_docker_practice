@@ -19,3 +19,10 @@ type Sport struct {
   Name   string `json:"name" validate:"required"`
   Member int    `json:"member" validate:"required"`
 }
+
+type Table1JoinTable2 struct {
+  Table1_title string
+  Table1_number int
+  Table2_title string
+  Table2_number int
+}
